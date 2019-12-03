@@ -1,4 +1,6 @@
 //nest arith within array of functions
+//HTML CHAR CODES
+//https://www.rapidtables.com/web/html/html-codes.html
 
 //SYMBOL MAKER - uses fromCharCode to assign a random number between 33-47. ie ( !"#$%&'()*+,-./ )
 function randomSymbol() {
@@ -19,4 +21,18 @@ function randomLowercase() {
 function randomUppercase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
+//TEST to see if functions are working properly
+console.log(randomSymbol());
+console.log(randomNumber());
+console.log(randomLowercase());
+console.log(randomUppercase());
 
+//nest the functions together as one variable
+var randomFinder = {
+    symbol: randomSymbol(),
+    number: randomNumber(),
+    lowerCase: randomLowercase(),
+    uppercase: randomUppercase(),
+}
+
+//Set up the HTML objects that we will fill in
