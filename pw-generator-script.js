@@ -38,10 +38,15 @@ var randomFinder = {
 //Set up the HTML objects that we will fill in
 
 
-//Set up choices for user. ~Length and symbol/number/upper/lower. Use prompt? Checkboxes? 
+//Set up choices for user. ~Length and symbol/number/upper/lower. Use prompt? Checkboxes? Probably need to use a prompt.
+//not sure I can figure out how to validate checkboxes in time to complete by wed.
+
+
+//Validate selection, ie - At least one must be selected.
 
 
 //Create for loop with if conditionals that cycles randomFinder (create new array? not sure if it works like an array) 
 //for however long the password will be, picking the selected parameters
+
 
 //print the result in the password id box
