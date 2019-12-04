@@ -36,10 +36,21 @@ var randomFinder = {
 }
 
 //Set up the HTML objects that we will fill in
+var lengthChoice = document.getElementById("myRange");
+var symbolChoice = document.getElementById("symboleCheck");
+var numberChoice = document.getElementById("numberCheck");
+var lowerChoice = document.getElementById("lowerCheck");
+var upperChoice = document.getElementById("upperCheck");
+var generateUse = document.getElementById("generate");
+var clipboardUse = document.getElementById("copy");
+var securePassword = document.getElementById("password");
 
+generateUse.addEventListener("click", function(){
+    var length = lengthChoice.value;
+    console.log(length);
+});
 
-//Set up choices for user. ~Length and symbol/number/upper/lower. Use prompt? Checkboxes? Probably need to use a prompt.
-//not sure I can figure out how to validate checkboxes in time to complete by wed.
+console.log(lengthChoice.value);
 
 
 //Validate selection, ie - At least one must be selected.
