@@ -31,13 +31,13 @@ console.log(randomUppercase());
 var randomFinder = {
     symbol: randomSymbol(),
     number: randomNumber(),
-    lowerCase: randomLowercase(),
+    lowercase: randomLowercase(),
     uppercase: randomUppercase(),
 }
 
 //Set up the HTML objects that we will fill in
 var lengthChoice = document.getElementById("myRange");
-var symbolChoice = document.getElementById("symboleCheck");
+var symbolChoice = document.getElementById("symbolCheck");
 var numberChoice = document.getElementById("numberCheck");
 var lowerChoice = document.getElementById("lowerCheck");
 var upperChoice = document.getElementById("upperCheck");
@@ -46,11 +46,36 @@ var clipboardUse = document.getElementById("copy");
 var securePassword = document.getElementById("password");
 
 generateUse.addEventListener("click", function(){
-    var length = lengthChoice.value;
-    console.log(length);
+    var lengthVar = +lengthChoice.value;
+    var symbolVar = symbolChoice.checked;
+    var numberVar = numberChoice.checked;
+    var lowerVar = lowerChoice.checked;
+    var upperVar = upperChoice.checked;
+
+    
+    console.log(symbolVar);
+    console.log(numberVar);
+    console.log(lowerVar);
+    console.log(upperVar);
+
+    securePassword.innerText = makePW(lengthVar, symbolVar, numberVar, lowerVar, upperVar);
 });
 
-console.log(lengthChoice.value);
+function makePW(symbol, number, lowercase, uppercase, length){
+//1- set up password variable
+//2- ignore unchecked boxes
+//3- loop until length is reached 
+//4- call funtion to generate each relevant pw char type
+//5- print pw on site
+
+var yourPassword = "";
+var boxesChecked = symbol + number + lowercase + uppercase + 0;
+console.log("boxesChecked: ", boxesChecked);
+//ISSUE - UPPERCASE WON'T REGISTER. ALWAYS COUNTS AS ZERO!!!??? OTHERS WORK JUST FUCKING FINE!
+//ISSUE - whether or not checkbox for uppercase is (un)checked, the count comes to 71 (68+3) when
+//ISSUE - it should be 72 (68+4). Also not actually sure why 68 is being counted here. like...
+//ISSUE - I get that it's the password length but I didn't call it here on purpose.
+}
 
 
 //Validate selection, ie - At least one must be selected.
