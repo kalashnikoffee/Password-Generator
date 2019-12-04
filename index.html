@@ -13,14 +13,30 @@
     <h2>Generate a Password</h2>
     <textarea
       readonly
-      id="password"
+      id="password" 
       placeholder="Your Secure Password"
       aria-label="Generated Password"
-    ></textarea>
+    ></textarea><!--"password"=result/final-product-->
+    <br>
     <button id="generate">Generate Password</button>
     <button id="copy">
       Copy to Clipboard
     </button>
+    <!--Slide bar-->
+    <div class="slidecontainer">
+      <input type="range" min="8" max="128" value="68" class="slider" id="myRange">
+      <p>Password Length: <span id="demo"></span></p>
+    </div>
+    <br>
+    <!--checkboxes for user preferences-->
+    Symbols: <input type="checkbox" id="myCheck">
+    <br>
+    Numbers: <input type="checkbox" id="myCheck">
+    <br>
+    Uppercase Letters: <input type="checkbox" id="myCheck">
+    <br>
+    Lowercase Letters: <input type="checkbox" id="myCheck">
   <script src="pw-generator-script.js"></script>
   </body>
 </html>
+<!---->

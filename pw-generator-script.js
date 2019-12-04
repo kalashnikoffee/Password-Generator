@@ -50,3 +50,12 @@ var randomFinder = {
 
 
 //print the result in the password id box
+
+//Slider info so it shows the right number
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
