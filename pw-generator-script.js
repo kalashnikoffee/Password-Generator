@@ -21,13 +21,13 @@ function randomLowercase() {
 function randomUppercase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
-//TEST to see if functions are working properly
+//-----------------TEST-----------------------
 console.log(randomSymbol());
 console.log(randomNumber());
 console.log(randomLowercase());
 console.log(randomUppercase());
 
-//nest the functions together as one variable
+//------------NEST THEM ALL-----------------------
 var randomFinder = {
     symbol: randomSymbol,
     number: randomNumber,
@@ -35,7 +35,7 @@ var randomFinder = {
     uppercase: randomUppercase,
 }
 
-//Set up the HTML objects that we will fill in
+//----------------------DOM ELEMENTS--------------------------
 var lengthChoice = document.getElementById("myRange");
 var symbolChoice = document.getElementById("symbolCheck");
 var numberChoice = document.getElementById("numberCheck");
@@ -61,6 +61,7 @@ generateUse.addEventListener("click", function(){
     securePassword.innerText = makePW(symbolVar, numberVar, lowerVar, upperVar, lengthVar);
 });
 
+//---------------RANDOM PW FUNCTION-----------------------
 function makePW(symbol, number, lowercase, uppercase, length){
 	let generatedPassword = '';
     var boxesChecked = lowercase + uppercase + number + symbol;
@@ -85,50 +86,19 @@ function makePW(symbol, number, lowercase, uppercase, length){
     }
 
 console.log(generatedPassword);
+
+//--------------------FANFARE PLEASE!!--------------------
 return generatedPassword;
-
-
-	
-	// Doesn't have a selected type
-	// if(typesCount === 0) {
-	// 	return '';
-	// }
-	
-	// create a loop
-	//for(let i=0; i<length; i+=typesCount) {
-// 		typesArr.forEach(type => {
-// 			const funcName = Object.keys(type)[0];
-// 			generatedPassword += randomFunc[funcName]();
-// 		});
-// 	}
-	
-// 	const finalPassword = generatedPassword.slice(0, length);
-	
 }
 
-//1- set up password variable
-//2- ignore unchecked boxes
-//3- loop until length is reached 
-//4- call funtion to generate each relevant pw char type
-//5- print pw on site
+//---------------COPY TO CLIPBOARD----------------------
+function copyPw() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    document.execCommand("copy");
+}
 
-
-
-
-
-
-
-
-//Validate selection, ie - At least one must be selected.
-
-
-//Create for loop with if conditionals that cycles randomFinder (create new array? not sure if it works like an array) 
-//for however long the password will be, picking the selected parameters
-
-
-//print the result in the password id box
-
-//Slider info so it shows the right number
+//-----------------SLIDER/PW Length-----------------
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
