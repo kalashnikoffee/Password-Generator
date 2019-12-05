@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#heading{
+    margin: auto;
+    text-align: center;
+}
+
+#bigbox{
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    padding: 0px, 0px, 10px, 0px;
+    
+}
+#h2thing{
+    padding-right: 250px;
+}
+
+#lessbigbox{
+    border: ridge;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+#generate{
+    float: left;
+    background-color: #af0808;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: large;
+    border-radius: 12px;
+}
+#copy{
+    float: right;
+    background-color: #c0c7cf;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: large;
+    border-radius: 12px;
+}
