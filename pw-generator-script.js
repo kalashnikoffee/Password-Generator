@@ -58,24 +58,44 @@ generateUse.addEventListener("click", function(){
     console.log(lowerVar);
     console.log(upperVar);
 
-    securePassword.innerText = makePW(lengthVar, symbolVar, numberVar, lowerVar, upperVar);
+    securePassword.innerText = makePW(symbolVar, numberVar, lowerVar, upperVar, lengthVar);
 });
 
 function makePW(symbol, number, lowercase, uppercase, length){
+	let generatedPassword = '';
+    var boxesChecked = lowercase + uppercase + number + symbol;
+    console.log(boxesChecked);
+    console.log(lowercase, uppercase, number, symbol);
+
+	
+	// Doesn't have a selected type
+	// if(typesCount === 0) {
+	// 	return '';
+	// }
+	
+	// create a loop
+	//for(let i=0; i<length; i+=typesCount) {
+// 		typesArr.forEach(type => {
+// 			const funcName = Object.keys(type)[0];
+// 			generatedPassword += randomFunc[funcName]();
+// 		});
+// 	}
+	
+// 	const finalPassword = generatedPassword.slice(0, length);
+	
+}
+
 //1- set up password variable
 //2- ignore unchecked boxes
 //3- loop until length is reached 
 //4- call funtion to generate each relevant pw char type
 //5- print pw on site
 
-var yourPassword = "";
-var boxesChecked = symbol + number + lowercase + uppercase + 0;
-console.log("boxesChecked: ", boxesChecked);
-//ISSUE - UPPERCASE WON'T REGISTER. ALWAYS COUNTS AS ZERO!!!??? OTHERS WORK JUST FUCKING FINE!
-//ISSUE - whether or not checkbox for uppercase is (un)checked, the count comes to 71 (68+3) when
-//ISSUE - it should be 72 (68+4). Also not actually sure why 68 is being counted here. like...
-//ISSUE - I get that it's the password length but I didn't call it here on purpose.
-}
+
+
+
+
+
 
 
 //Validate selection, ie - At least one must be selected.
