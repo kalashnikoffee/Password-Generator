@@ -29,10 +29,10 @@ console.log(randomUppercase());
 
 //nest the functions together as one variable
 var randomFinder = {
-    symbol: randomSymbol(),
-    number: randomNumber(),
-    lowercase: randomLowercase(),
-    uppercase: randomUppercase(),
+    symbol: randomSymbol,
+    number: randomNumber,
+    lowercase: randomLowercase,
+    uppercase: randomUppercase,
 }
 
 //Set up the HTML objects that we will fill in
@@ -64,8 +64,29 @@ generateUse.addEventListener("click", function(){
 function makePW(symbol, number, lowercase, uppercase, length){
 	let generatedPassword = '';
     var boxesChecked = lowercase + uppercase + number + symbol;
-    console.log(boxesChecked);
-    console.log(lowercase, uppercase, number, symbol);
+    console.log("boxes-added", boxesChecked);
+    console.log("boxes-individual", symbol, number, lowercase, uppercase);
+
+    var boxArray = [{symbol}, {number}, {lowercase}, {uppercase}].filter(
+        item => Object.values(item)[0]
+    );
+    console.log("boxArray", boxArray);
+
+    if(boxesChecked === 0) {
+       return ''; 
+    }
+
+    for(let i = 0; i < length; i += boxesChecked){
+        boxArray.forEach(type => {
+            var finderName = Object.keys(type)[0];
+            console.log("Finder-Name", finderName);
+            generatedPassword += randomFinder[finderName]();
+        });
+    }
+
+console.log(generatedPassword);
+return generatedPassword;
+
 
 	
 	// Doesn't have a selected type
