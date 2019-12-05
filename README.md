@@ -1,37 +1,17 @@
 # Password-Generator
 
-One Paragraph of project description goes here
+This project aims to provide users with randomly generated strings of symbols, numbers, uppercase letters, and lowercase letters of a length between 8 and 128 characters. Users can choose which character types to use and determine the length of the string. Once the string is generated users can then copy the it to a clipboard to, ostensibly, use as a unique password.
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+head to https://kalashnikoffee.github.io/Password-Generator/ and go nuts
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Nothing required to install. visit the live site, and use to generate random passwords.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
+NA
 
 ## Built With
 
@@ -41,16 +21,16 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://kalashnikoffee.github.io/Password-Generator/)
 
 
 ## Authors
 
-* **YOUR NAME** 
+Lucas Coffee 
 
-- [Link to Portfolio Site](#)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/)
+- [Link to Portfolio Site](https://kalashnikoffee.github.io/responsive-bio/)
+- [Link to Github](https://github.com/kalashnikoffee)
+- [Link to LinkedIn](https://www.linkedin.com/in/lucas-coffee-08853719/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -60,6 +40,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
+Thanks again to Jerome, Kerwin, and Mahisha for their guidance.
